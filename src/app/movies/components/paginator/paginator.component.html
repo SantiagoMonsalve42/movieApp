@@ -1,0 +1,16 @@
+<nav aria-label="...">
+    <ul class="pagination">
+      <li class="page-item" [ngClass]="{'disabled': currentPage === 1}">
+        <a class="page-link" (click)="emitSelected('anterior')" >Anterior</a>
+      </li>
+      <ng-container *ngFor="let pagina of calcularPaginasVisibles()">
+        <li *ngIf="pagina > 0 && pagina <= totalPages" [ngClass]="{'disabled': currentPage === pagina}">
+            <a class="page-link" (click)="emitSelected(pagina)">{{pagina}}</a>
+        </li>
+      </ng-container>
+      
+      <li class="page-item">
+        <a class="page-link" (click)="emitSelected('siguiente')">Siguiente</a>
+      </li>
+    </ul>
+  </nav>

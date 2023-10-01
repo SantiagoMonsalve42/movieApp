@@ -1,0 +1,13 @@
+<div class="card mt-2" style="width: 100%;height: 100%;" >
+        <img src="https://image.tmdb.org/t/p/w500/{{movie?.poster_path}}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">{{movie?.original_title}}</h5>
+          <p class="card-text"><strong>Fecha de lanzamiento: </strong>{{movie.release_date}}</p>
+          <p class="card-text"><strong>Calificacion promedio: </strong>{{movie.vote_average}}</p>
+          <p class="card-text">{{movie.overview}}</p>
+          
+        </div> 
+        <div class="card-footer text-muted">
+            <a href="#" class="btn btn-primary">Ver mas</a>
+        </div>
+</div>
